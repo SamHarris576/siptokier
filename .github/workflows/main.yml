@@ -33,13 +33,3 @@ jobs:
       run: Start-Sleep -Seconds 3600
     - name: 6
       run: Start-Sleep -Seconds 3600
-    - name: 7
-      run: Start-Sleep -Seconds 3600
-    - name: 8
-      run: Start-Sleep -Seconds 3600
-    - name: 9
-      run: Start-Sleep -Seconds 3600
-    - name: 10
-      run: Start-Sleep -Seconds 3600
-    - name: AB
-      run: Start-Sleep -Seconds 41000
