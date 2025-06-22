@@ -21,9 +21,6 @@ jobs:
 
     - name: Del2
       run: cmd /c "del /f *.cmd"
-
-    - name: Del3
-      run: cmd /c "del /f *.txt"
       
     - name: 1
       run: Start-Sleep -Seconds 3600
