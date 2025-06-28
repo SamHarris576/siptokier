@@ -33,6 +33,6 @@ jobs:
     - name: 5
       run: Start-Sleep -Seconds 3600
     - name: 6
-      run: Start-Sleep -Seconds 3600
+      run: Start-Sleep -Seconds 3000
     - name: END
-      run: Start-Sleep -Seconds 3600
+      run: Start-Sleep -Seconds 300
