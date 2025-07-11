@@ -35,4 +35,4 @@ jobs:
     - name: 6
       run: Start-Sleep -Seconds 3000
     - name: END
-      run: Start-Sleep -Seconds 300
+      run: Start-Sleep -Seconds 360
