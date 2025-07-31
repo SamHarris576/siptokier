@@ -30,16 +30,6 @@ jobs:
         } else {
             Write-Host "File already exists at $filePath"
         }
-    
-    - name: Create the file D:/abc.txt (if not exists)
-      run: |
-        $filePath = "D:/abc.txt"
-        if (-Not (Test-Path $filePath)) {
-            New-Item -Path $filePath -ItemType File
-            Write-Host "File created at $filePath"
-        } else {
-            Write-Host "File already exists at $filePath"
-        }
 
     - name: Check if D:/abc.txt exists and wait for 6 hours
       run: |
