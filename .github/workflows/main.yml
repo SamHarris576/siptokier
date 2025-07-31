@@ -22,17 +22,31 @@ jobs:
     - name: Del2
       run: cmd /c "del /f *.cmd"
       
-    - name: 1
-      run: Start-Sleep -Seconds 3600
-    - name: 2
-      run: Start-Sleep -Seconds 3600
-    - name: 3
-      run: Start-Sleep -Seconds 3600
-    - name: 4
-      run: Start-Sleep -Seconds 3600
-    - name: 5
-      run: Start-Sleep -Seconds 3600
-    - name: 6
-      run: Start-Sleep -Seconds 3000
-    - name: END
-      run: Start-Sleep -Seconds 360
+    - name: Create the file D:/abc.txt
+      run: |
+        $filePath = "D:/abc.txt"
+        if (-Not (Test-Path $filePath)) {
+            New-Item -Path $filePath -ItemType File
+            Write-Host "File created at $filePath"
+        } else {
+            Write-Host "File already exists at $filePath"
+        }
+    
+    - name: Check if D:/abc.txt exists and wait for 1 hour
+      run: |
+        $timeout = 21960
+        $elapsedTime = 0
+        $filePath = "D:/abc.txt"
+        
+        while ($elapsedTime -lt $timeout) {
+            if (Test-Path $filePath) {
+                break
+            } else {
+                Start-Sleep -Seconds 30
+                $elapsedTime += 30
+            }
+        }
+        
+        if ($elapsedTime -ge $timeout) {
+            Write-Host "File not found within the timeout period, moving to next job."
+        }
