@@ -37,10 +37,8 @@ jobs:
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
-        Write-Host "Starting file check loop for $filePath"
 
         while ($elapsedTime -lt $timeout) {
-            Write-Host "Checking if the file exists..."
 
             if (Test-Path $filePath) {
                 Start-Sleep -Seconds 30
