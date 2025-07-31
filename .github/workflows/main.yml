@@ -54,15 +54,9 @@ jobs:
             Write-Host "Checking if the file exists..."
 
             if (Test-Path $filePath) {
-                Write-Host "File found! Proceeding to next task."
-                break
-            } else {
-                Write-Host "File not found, checking again in 30 seconds..."
                 Start-Sleep -Seconds 30
                 $elapsedTime += 30
+            } else {
+                break
             }
-        }
-
-        if ($elapsedTime -ge $timeout) {
-            Write-Host "File not found within the timeout period, moving to next job."
         }
