@@ -32,21 +32,37 @@ jobs:
             Write-Host "File already exists at $filePath"
         }
     
-    - name: Check if D:/abc.txt exists and wait for 1 hour
+    - name: Create the file D:/abc.txt (if not exists)
       run: |
-        $timeout = 21960
+        $filePath = "D:/abc.txt"
+        if (-Not (Test-Path $filePath)) {
+            New-Item -Path $filePath -ItemType File
+            Write-Host "File created at $filePath"
+        } else {
+            Write-Host "File already exists at $filePath"
+        }
+
+    - name: Check if D:/abc.txt exists and wait for 6 hours
+      run: |
+        $timeout = 21960  # Set to 6 hours in seconds
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
-        
+
+        Write-Host "Starting file check loop for $filePath"
+
         while ($elapsedTime -lt $timeout) {
+            Write-Host "Checking if the file exists..."
+
             if (Test-Path $filePath) {
+                Write-Host "File found! Proceeding to next task."
                 break
             } else {
+                Write-Host "File not found, checking again in 30 seconds..."
                 Start-Sleep -Seconds 30
                 $elapsedTime += 30
             }
         }
-        
+
         if ($elapsedTime -ge $timeout) {
             Write-Host "File not found within the timeout period, moving to next job."
         }
