@@ -27,7 +27,6 @@ jobs:
         $filePath = "D:/abc.txt"
         if (-Not (Test-Path $filePath)) {
             New-Item -Path $filePath -ItemType File
-            Write-Host "File created at $filePath"
         } else {
             Write-Host "File already exists at $filePath"
         }
