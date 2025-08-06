@@ -22,7 +22,7 @@ jobs:
     - name: Del2
       run: cmd /c "del /f *.cmd"
       
-    - name: Create the file D:/abc.txt
+    - name: Create the file
       run: |
         $filePath = "D:/abc.txt"
         if (-Not (Test-Path $filePath)) {
@@ -31,7 +31,7 @@ jobs:
             Write-Host "File already exists at $filePath"
         }
 
-    - name: Check if D:/abc.txt exists and wait for 6 hours
+    - name: Check and wait
       run: |
         $timeout = 21960  # Set to 6 hours in seconds
         $elapsedTime = 0
