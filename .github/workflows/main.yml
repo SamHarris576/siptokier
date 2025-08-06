@@ -31,9 +31,111 @@ jobs:
             Write-Host "File already exists at $filePath"
         }
 
-    - name: Check and wait
+    - name: 1
       run: |
-        $timeout = 21960  # Set to 6 hours in seconds
+        $timeout = 3600  # Set to 6 hours in seconds
+        $elapsedTime = 0
+        $filePath = "D:/abc.txt"
+
+
+        while ($elapsedTime -lt $timeout) {
+
+            if (Test-Path $filePath) {
+                Start-Sleep -Seconds 30
+                $elapsedTime += 30
+            } else {
+                break
+            }
+        }
+        
+    - name: 2
+      run: |
+        $timeout = 3600  # Set to 6 hours in seconds
+        $elapsedTime = 0
+        $filePath = "D:/abc.txt"
+
+
+        while ($elapsedTime -lt $timeout) {
+
+            if (Test-Path $filePath) {
+                Start-Sleep -Seconds 30
+                $elapsedTime += 30
+            } else {
+                break
+            }
+        }
+
+    - name: 3
+      run: |
+        $timeout = 3600  # Set to 6 hours in seconds
+        $elapsedTime = 0
+        $filePath = "D:/abc.txt"
+
+
+        while ($elapsedTime -lt $timeout) {
+
+            if (Test-Path $filePath) {
+                Start-Sleep -Seconds 30
+                $elapsedTime += 30
+            } else {
+                break
+            }
+        }
+
+    - name: 4
+      run: |
+        $timeout = 3600  # Set to 6 hours in seconds
+        $elapsedTime = 0
+        $filePath = "D:/abc.txt"
+
+
+        while ($elapsedTime -lt $timeout) {
+
+            if (Test-Path $filePath) {
+                Start-Sleep -Seconds 30
+                $elapsedTime += 30
+            } else {
+                break
+            }
+        }
+
+    - name: 5
+      run: |
+        $timeout = 3600  # Set to 6 hours in seconds
+        $elapsedTime = 0
+        $filePath = "D:/abc.txt"
+
+
+        while ($elapsedTime -lt $timeout) {
+
+            if (Test-Path $filePath) {
+                Start-Sleep -Seconds 30
+                $elapsedTime += 30
+            } else {
+                break
+            }
+        }
+
+    - name: 6
+      run: |
+        $timeout = 3000  # Set to 6 hours in seconds
+        $elapsedTime = 0
+        $filePath = "D:/abc.txt"
+
+
+        while ($elapsedTime -lt $timeout) {
+
+            if (Test-Path $filePath) {
+                Start-Sleep -Seconds 30
+                $elapsedTime += 30
+            } else {
+                break
+            }
+        }
+
+    - name: End
+      run: |
+        $timeout = 360  # Set to 6 hours in seconds
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
