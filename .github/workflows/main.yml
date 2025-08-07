@@ -33,7 +33,7 @@ jobs:
 
     - name: 1
       run: |
-        $timeout = 3600  # Set to 6 hours in seconds
+        $timeout = 3600
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
@@ -50,7 +50,7 @@ jobs:
         
     - name: 2
       run: |
-        $timeout = 3600  # Set to 6 hours in seconds
+        $timeout = 3600
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
@@ -67,7 +67,7 @@ jobs:
 
     - name: 3
       run: |
-        $timeout = 3600  # Set to 6 hours in seconds
+        $timeout = 3600
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
@@ -84,7 +84,7 @@ jobs:
 
     - name: 4
       run: |
-        $timeout = 3600  # Set to 6 hours in seconds
+        $timeout = 3600
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
@@ -101,7 +101,7 @@ jobs:
 
     - name: 5
       run: |
-        $timeout = 3600  # Set to 6 hours in seconds
+        $timeout = 3600
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
@@ -118,7 +118,7 @@ jobs:
 
     - name: 6
       run: |
-        $timeout = 3000  # Set to 6 hours in seconds
+        $timeout = 3000
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
@@ -135,7 +135,7 @@ jobs:
 
     - name: End
       run: |
-        $timeout = 360  # Set to 6 hours in seconds
+        $timeout = 360
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
