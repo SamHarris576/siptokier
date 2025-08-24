@@ -135,7 +135,7 @@ jobs:
 
     - name: End
       run: |
-        $timeout = 360
+        $timeout = 300
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
@@ -149,3 +149,7 @@ jobs:
                 break
             }
         }
+    - name: Cleanup
+      run: |
+        Get-ChildItem -Path "D:\" -Force | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+        Write-Host "Successfully Cleaned"
