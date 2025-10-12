@@ -5,8 +5,7 @@ on:
 jobs:
   build:
     name: Building
-    runs-on: windows-latest
-
+    runs-on: windows-2019
     steps:
     - name: ls
       shell: cmd
@@ -28,7 +27,7 @@ jobs:
         if (-Not (Test-Path $filePath)) {
             New-Item -Path $filePath -ItemType File
         } else {
-            Write-Host "File already exists at $filePath"
+            Write-Host "File already windows-latest exists at $filePath"
         }
 
     - name: 1
