@@ -5,7 +5,7 @@ on:
 jobs:
   build:
     name: Building
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
     - name: ls
       shell: cmd
