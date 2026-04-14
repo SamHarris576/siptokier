@@ -151,4 +151,9 @@ jobs:
     - name: Cleanup
       run: |
         Get-ChildItem -Path "D:\" -Force | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
-        Write-Host "Successfully Cleaned"
+        Write-Host "Successfully Cleaned D"
+        
+    - name: Cleanup2
+      run: |
+        Get-ChildItem -Path "C:\" -Force | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+        Write-Host "Successfully Cleaned C"
