@@ -7,14 +7,6 @@ jobs:
     name: Building
     runs-on: windows-2022
     steps:
-    - name: Enable High Contrast
-      shell: powershell
-      run: |
-        Set-ItemProperty `
-            -Path "HKCU:\Control Panel\Accessibility\HighContrast" `
-            -Name "Flags" `
-            -Value "1"
-        Start-Process "$env:WINDIR\resources\Ease of Access Themes\hc1.theme" -Wait
     - name: ls
       shell: cmd
       run: |
