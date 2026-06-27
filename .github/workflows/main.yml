@@ -116,9 +116,9 @@ jobs:
             }
         }
 
-    - name: 6
+    - name: End
       run: |
-        $timeout = 3000
+        $timeout = 1800
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
@@ -133,9 +133,9 @@ jobs:
             }
         }
 
-    - name: End
+    - name: Last 15
       run: |
-        $timeout = 300
+        $timeout = 540
         $elapsedTime = 0
         $filePath = "D:/abc.txt"
 
