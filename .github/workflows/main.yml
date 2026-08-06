@@ -133,7 +133,7 @@ jobs:
             }
         }
 
-    - name: Last 15
+    - name: Last 6
       run: |
         $timeout = 400
         $elapsedTime = 0
